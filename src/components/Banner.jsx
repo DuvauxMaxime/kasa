@@ -1,4 +1,4 @@
-import Logo from '../images/LOGO.svg';
+import Logo from '../assets/LOGO.svg';
 import './Banner.css'
 
 function Banner() {

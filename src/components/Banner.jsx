@@ -1,7 +1,8 @@
 import Logo from '../images/LOGO.svg';
+import './Banner.css'
 
 function Banner() {
-    return <img src={Logo} alt="Logo Kasa" />
+    return <div className='kasa-logo'><img src={Logo} alt="Logo Kasa" /></div>
 }
 
 export default Banner

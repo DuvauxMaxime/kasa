@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: white;    
+    position: absolute;
+    bottom: 0px;
+}
+
+.kasaLogo {
+    margin: 66px 0 28px 0;
+    width: 8.47%;
+}
+
+.text{
+    margin: 0 0 29px 0;
+}

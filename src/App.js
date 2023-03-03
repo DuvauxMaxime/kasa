@@ -6,11 +6,12 @@ import { Error } from './pages/Error'
 import { Banner } from './components/Banner'
 import { Navigation } from './components/Navigation'
 import { Footer } from './components/Footer'
+import styles from './App.module.css'
  
 export const App = () => {
   return (
     <div>
-      <header><Banner /><Navigation /></header>
+      <header className={styles.header}><Banner /><Navigation /></header>
       <Routes>
         <Route path='/' element={ <Home />}/>
         <Route path='/a-propos/' element={ <About />}/>

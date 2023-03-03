@@ -1,10 +1,18 @@
 .navBar {
-    padding : 57px 100px 0 0 ;
+    display: flex;
+    padding : 57px 100px 0 0 ; 
+}
+
+.navLink{
     color: #FF6060;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
-    line-height: 34px;
-    letter-spacing: 0em;
-    text-align: right;  
+    text-align: right; 
+    text-decoration: none;
+    width: 136px;
+}
+
+.navLink:hover{
+    text-decoration: underline;
 }

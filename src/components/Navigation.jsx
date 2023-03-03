@@ -4,8 +4,8 @@ import styles from './Navigation.module.css'
 export const Navigation = () => {
     return (
             <nav className={styles.navBar}>
-                <NavLink to='/' >Accueil</NavLink>
-                <NavLink to='/a-propos/'>A propos</NavLink>
+                <NavLink to='/' className={styles.navLink}>Accueil</NavLink>
+                <NavLink to='/a-propos/' className={styles.navLink}>A Propos</NavLink>
             </nav>
     )
 }

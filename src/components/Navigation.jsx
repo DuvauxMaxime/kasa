@@ -1,4 +1,4 @@
-function Navigation() {
+export const Navigation = () => {
     return (
             <ul>
                 <li>Accueil</li>
@@ -6,5 +6,3 @@ function Navigation() {
             </ul>
     )
 }
-
-export default Navigation

@@ -2,7 +2,7 @@ import './Footer.css'
 import LogoFooter from '../assets/logo-footer.svg'
 
 
-function Footer() {
+export const Footer = () => {
     return (
         <div className='footer'>
             <img src={LogoFooter} alt="Kasa" className='footer-logo'/>
@@ -11,4 +11,3 @@ function Footer() {
     )
 }
 
-export default Footer

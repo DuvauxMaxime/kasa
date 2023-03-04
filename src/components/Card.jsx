@@ -1,7 +1,5 @@
 import styles from './Card.module.css'
 
 export const Card = () => {
-    return (
-        <div className={styles.card}>Texte card</div>
-    )
+      return <div className={styles.card}>Texte card</div>
 }

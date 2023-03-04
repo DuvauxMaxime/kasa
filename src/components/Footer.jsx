@@ -1,14 +1,13 @@
-import './Footer.css'
-import LogoFooter from '../assets/logo-footer.svg'
+import styles from './Footer.module.css'
+import logoFooter from '../assets/logoFooter.svg'
 
 
-function Footer() {
+export const Footer = () => {
     return (
-        <div className='footer'>
-            <img src={LogoFooter} alt="Kasa" className='footer-logo'/>
-            <p>© 2020 Kasa. All rights reserved</p>
+        <div className={styles.footer}>
+            <img src={logoFooter} alt="Kasa" className={styles.kasaLogo}/>
+            <p className={styles.text}>© 2020 Kasa. All rights reserved</p>
         </div>
     )
 }
 
-export default Footer

@@ -1,8 +1,7 @@
-import './Banner.css'
-import Logo from '../assets/LOGO.svg';
+import styles from './Banner.module.css'
+import logoBanner from '../assets/logoBanner.svg';
 
-function Banner() {
-    return <img src={Logo} alt="Logo Kasa" className='kasa-logo'/>
+export const Banner = () => {
+    console.log(styles)
+    return <img src={logoBanner} alt="Logo Kasa" className={styles.kasaLogo}/>
 }
-
-export default Banner

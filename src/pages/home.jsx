@@ -1,10 +1,15 @@
-import { Card } from '../components/Card'
+import { HomePageIllustration } from '../components/HomePageIllustration'
+import home from '../assets/home.svg'
+import styles from './Home.module.css'
 
 export const Home = () => {
    return (
-      <div>
+      <div className={styles.container}>
          <h1>Accueil</h1>
-         <Card />
+         <HomePageIllustration
+            src={home}
+            alt="Bord de mer par temps de brume"
+         />
       </div>
    )
 }

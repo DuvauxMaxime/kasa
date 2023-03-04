@@ -1,3 +1,9 @@
+import {Card} from '../components/Card'
+
 export const Home = () => {
-    return <h1>Accueil</h1>
+    return (
+    <div><h1>Accueil</h1>
+    <Card/>
+    </div>
+    )
 }

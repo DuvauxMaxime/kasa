@@ -1,0 +1,22 @@
+.navBar {
+    display: flex;
+    padding : 57px 100px 0 0 ; 
+}
+
+.navBar ul{
+    list-style: none;
+    display: flex;
+}
+
+.navLink{
+    color: #FF6060;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: right; 
+    text-decoration: none;
+    width: 136px;
+}
+
+.navLink:hover{
+    text-decoration: underline;
+}

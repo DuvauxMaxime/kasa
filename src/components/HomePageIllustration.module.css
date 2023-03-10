@@ -1,6 +1,17 @@
-.image{
+.container{
     width: 86.11%;
+
+}
+.image{
     height: 223px;
+    width: 100%;
     object-fit: cover;
     border-radius: 25px;
+}
+
+.title {
+    position: relative;
+    top: 0;
+    left: 0;
+
 }

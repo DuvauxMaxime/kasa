@@ -2,7 +2,7 @@ import { HomePageIllustration } from '../components/HomePageIllustration'
 import home from '../assets/home.svg'
 import styles from './Home.module.css'
 
-export const Home = () => {
+const Home = () => {
    return (
       <div className={styles.container}>
          <h1>Accueil</h1>
@@ -12,4 +12,10 @@ export const Home = () => {
          />
       </div>
    )
+}
+
+export default Home
+
+export const locationsLoader = () => {
+   return {}
 }

@@ -1,3 +1,9 @@
-export const Location = () => {
+const Location = () => {
    return <h1>Location</h1>
+}
+
+export default Location
+
+export const locationLoader = () => {
+   return {}
 }

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import styles from './Navigation.module.css'
 
-export const Navigation = () => {
+const Navigation = () => {
    return (
       <nav className={styles.navBar}>
          <ul>
@@ -15,3 +15,5 @@ export const Navigation = () => {
       </nav>
    )
 }
+
+export default Navigation

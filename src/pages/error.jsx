@@ -1,6 +1,6 @@
 import styles from './Error.module.css'
 
-export const Error = () => {
+const Error = () => {
    return (
       <main className={styles.container}>
          <h1 className={styles.title}>404</h1>
@@ -13,3 +13,5 @@ export const Error = () => {
       </main>
    )
 }
+
+export default Error

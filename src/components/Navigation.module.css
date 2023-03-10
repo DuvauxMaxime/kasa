@@ -3,6 +3,11 @@
     padding : 57px 100px 0 0 ; 
 }
 
+.navBar ul{
+    list-style: none;
+    display: flex;
+}
+
 .navLink{
     color: #FF6060;
     font-size: 24px;

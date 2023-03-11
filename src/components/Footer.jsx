@@ -1,5 +1,5 @@
-import styles from './Footer.module.css'
-import logoFooter from '../assets/logoFooter.svg'
+import styles from './Footer.module.css';
+import logoFooter from '../assets/logoFooter.svg';
 
 const Footer = () => {
    return (
@@ -7,7 +7,7 @@ const Footer = () => {
          <img src={logoFooter} alt="Kasa" className={styles.kasaLogo} />
          <p className={styles.text}>© 2020 Kasa. All rights reserved</p>
       </footer>
-   )
-}
+   );
+};
 
-export default Footer
+export default Footer;

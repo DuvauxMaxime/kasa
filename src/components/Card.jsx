@@ -1,5 +1,7 @@
-import styles from './Card.module.css'
+import styles from './Card.module.css';
 
-export const Card = () => {
-      return <div className={styles.card}>Texte card</div>
-}
+const Card = () => {
+   return <div className={styles.card}>Texte card</div>;
+};
+
+export default Card;

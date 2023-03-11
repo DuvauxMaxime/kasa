@@ -1,4 +1,4 @@
-import styles from './Error.module.css'
+import styles from './Error.module.css';
 
 const Error = () => {
    return (
@@ -11,7 +11,7 @@ const Error = () => {
             Retourner sur la page d'accueil
          </a>
       </main>
-   )
-}
+   );
+};
 
-export default Error
+export default Error;

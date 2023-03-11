@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom'
-import styles from './Navigation.module.css'
+import { NavLink } from 'react-router-dom';
+import styles from './Navigation.module.css';
 
 const Navigation = () => {
    return (
@@ -13,7 +13,7 @@ const Navigation = () => {
             </NavLink>
          </ul>
       </nav>
-   )
-}
+   );
+};
 
-export default Navigation
+export default Navigation;

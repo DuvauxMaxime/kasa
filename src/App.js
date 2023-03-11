@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 import {
    Route,
    createBrowserRouter,
    createRoutesFromElements,
    RouterProvider,
-} from 'react-router-dom'
-import Home, { locationsLoader } from './pages/Home'
-import About, { aProposLoader } from './pages/About'
-import Location, { locationLoader } from './pages/Location'
-import Error from './pages/Error'
-import RootLayout from './components/RootLayout'
+} from 'react-router-dom';
+import Home, { locationsLoader } from './pages/Home';
+import About, { aProposLoader } from './pages/About';
+import Location, { locationLoader } from './pages/Location';
+import Error from './pages/Error';
+import RootLayout from './components/RootLayout';
 
 const router = createBrowserRouter(
    createRoutesFromElements(
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
          <Route path="a-propos" element={<About />} loader={aProposLoader} />
       </Route>
    )
-)
+);
 
 export const App = () => {
    return (
@@ -43,5 +43,5 @@ export const App = () => {
       //       <Footer />
       //    </footer>
       // </div>
-   )
-}
+   );
+};

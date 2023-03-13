@@ -7,7 +7,11 @@ import dataLocations from '../data/logements.json';
 const Home = () => {
    return (
       <div className={styles.container}>
-         <Banner src={home} alt="Bord de mer par temps de brume" />
+         <Banner
+            src={home}
+            alt="Bord de mer par temps de brume"
+            text="Chez vous, partout et ailleurs"
+         />
       </div>
    );
 };

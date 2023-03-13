@@ -1,5 +1,23 @@
+import { useParams } from 'react-router-dom';
+import dataLocations from '../data/logements.json';
+import Carrousel from '../components/Carrousel';
+import styles from './Location.module.css';
+
 const Location = () => {
-   return <h1>Location</h1>;
+   let { id } = useParams();
+   console.log('==================> id <================');
+   console.log(id);
+   const dataLocation = dataLocations.find((location) => location.id === id);
+   console.log('============> dataLocation <==============');
+   console.log(dataLocation);
+   return (
+      <main className={styles.container}>
+         <Carrousel
+            src={dataLocation.cover}
+            alt={'appartement' + dataLocation.title}
+         />
+      </main>
+   );
 };
 
 export default Location;

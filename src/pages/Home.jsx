@@ -12,15 +12,16 @@ const Home = () => {
             alt="Bord de mer par temps de brume"
             text="Chez vous, partout et ailleurs"
          />
-         {dataLocations.map((location) => (
-            <Card
-               key={location.id}
-               id={location.id}
-               title={location.title}
-               cover={location.cover}
-            />
-         ))}
-         ;
+         <section className={styles.section}>
+            {dataLocations.map((location) => (
+               <Card
+                  key={location.id}
+                  id={location.id}
+                  title={location.title}
+                  cover={location.cover}
+               />
+            ))}
+         </section>
       </div>
    );
 };

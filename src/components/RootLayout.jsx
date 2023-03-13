@@ -3,11 +3,12 @@ import { Outlet } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import LogoHeader from './LogoHeader';
+import styles from './RootLayout.module.css';
 
 const RootLayout = () => {
    return (
       <>
-         <header>
+         <header className={styles.header}>
             <LogoHeader />
             <Navigation />
          </header>

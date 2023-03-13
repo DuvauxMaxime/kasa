@@ -3,7 +3,6 @@ import home from '../assets/home.svg';
 import styles from './Home.module.css';
 import Card from '../components/Card';
 import dataLocations from '../data/logements.json';
-import { useEffect } from 'react';
 
 const Home = () => {
    return (

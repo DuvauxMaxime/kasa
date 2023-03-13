@@ -12,6 +12,16 @@ const Home = () => {
             alt="Bord de mer par temps de brume"
             text="Chez vous, partout et ailleurs"
          />
+         <section className={styles.section}>
+            {dataLocations.map((location) => (
+               <Card
+                  key={location.id}
+                  id={location.id}
+                  title={location.title}
+                  cover={location.cover}
+               />
+            ))}
+         </section>
       </div>
    );
 };
@@ -19,17 +29,5 @@ const Home = () => {
 export default Home;
 
 export const locationsLoader = () => {
-   console.log('===========> DATALOCATIONS <===============');
-   console.log(dataLocations);
-   const locations = dataLocations.map((location) => (
-      <Card
-         key={location.id}
-         id={location.id}
-         title={location.title}
-         cover={location.cover}
-      />
-   ));
-   console.log('===========> LOCATION <===============');
-   console.log(locations);
-   return { locations };
+   return { dataLocations };
 };

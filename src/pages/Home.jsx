@@ -2,7 +2,8 @@ import Banner from '../components/Banner';
 import home from '../assets/home.svg';
 import styles from './Home.module.css';
 import Card from '../components/Card';
-import dataLocations from '../../data/logements.json';
+import dataLocations from '../data/logements.json';
+import { useEffect } from 'react';
 
 const Home = () => {
    return (
@@ -15,9 +16,17 @@ const Home = () => {
 export default Home;
 
 export const locationsLoader = () => {
+   console.log('===========> DATALOCATIONS <===============');
    console.log(dataLocations);
-   const location = dataLocations.map((location) => (
-      <Card title={location.title} cover={location.cover} />
+   const locations = dataLocations.map((location) => (
+      <Card
+         key={location.id}
+         id={location.id}
+         title={location.title}
+         cover={location.cover}
+      />
    ));
-   return {};
+   console.log('===========> LOCATION <===============');
+   console.log(locations);
+   return { locations };
 };

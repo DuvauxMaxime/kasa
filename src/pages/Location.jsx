@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom';
 import dataLocations from '../data/logements.json';
 import Carrousel from '../components/Carrousel';
+import TitleLocation from '../components/TitleLocation';
 import styles from './Location.module.css';
+import LocationLocation from '../components/LocationLocation';
 
 const Location = () => {
    let { id } = useParams();
@@ -16,6 +18,8 @@ const Location = () => {
             src={dataLocation.cover}
             alt={'appartement' + dataLocation.title}
          />
+         <TitleLocation title={dataLocation.title} />
+         <LocationLocation location={dataLocation.location} />
       </main>
    );
 };

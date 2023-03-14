@@ -1,5 +1,5 @@
 .titleContainer{
-    width: 71.04%;
+    width: 100%;
     margin: 31px 0 0 0;
     padding: 0 18px;
     display: flex;
@@ -11,6 +11,11 @@
 }
 
 
+.titleContainer:hover, .active .titleContainer{
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
 .title{
     font-family: 'Montserrat';
     font-weight: 500;
@@ -18,12 +23,28 @@
     color: white;
 }
 
+.active .icon{
+    transform: rotate(180deg);
+}
+
 .content{
+    visibility: hidden;
     z-index: -1;
     position: relative;
     top: -20px;
     padding: 20px 0 0 0 ;
-    width: 71.04%;
+    margin: 0;
+    background-color: #F7F7F7;
+    border-radius: 0 0 5px 5px;
+}
+
+.active .content{
+    visibility:visible;
+    z-index: -1;
+    position: relative;
+    top: -20px;
+    padding: 20px 0 0 0 ;
+    width: 100%;
     min-height: 146px;
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;

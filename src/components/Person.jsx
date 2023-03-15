@@ -1,10 +1,10 @@
 import styles from './Person.module.css';
 
-const Person = (props) => {
+const Person = ({ name, img }) => {
    return (
       <div className={styles.container}>
-         <p>{props.name}</p>
-         <img className={styles.image} src={props.img} alt={props.name} />
+         <p>{name}</p>
+         <img className={styles.image} src={img} alt={name} />
       </div>
    );
 };

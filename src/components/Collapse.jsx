@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import dropDownClose from '../assets/dropDownClose.svg';
 import styles from './Collapse.module.css';
 
-const Collapse = (props) => {
+const Collapse = ({ title, content }) => {
    const [active, setActive] = useState(false);
    const handleToggle = (e) => {
       setActive(!active);
@@ -10,7 +10,7 @@ const Collapse = (props) => {
    return (
       <div className={`${styles.container} ${active ? styles.active : null}`}>
          <div className={styles.titleContainer}>
-            <h1 className={styles.title}>{props.title}</h1>
+            <h1 className={styles.title}>{title}</h1>
             <img
                src={dropDownClose}
                className={styles.icon}
@@ -18,7 +18,7 @@ const Collapse = (props) => {
                alt="click"
             />
          </div>
-         <p className={styles.content}>{props.content}</p>
+         <p className={styles.content}>{content}</p>
       </div>
    );
 };

@@ -1,10 +1,10 @@
 import styles from './Banner.module.css';
 
-const Banner = (props) => {
+const Banner = ({ src, alt, text }) => {
    return (
       <div className={styles.container}>
-         <img src={props.src} alt={props.alt} className={styles.image} />
-         <h1 className={styles.title}>{props.text}</h1>
+         <img src={src} alt={alt} className={styles.image} />
+         <h1 className={styles.title}>{text}</h1>
       </div>
    );
 };

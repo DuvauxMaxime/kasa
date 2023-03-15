@@ -48,6 +48,8 @@ const Location = () => {
 
 export default Location;
 
-export const locationLoader = () => {
+export const locationLoader = ({ params }) => {
+   // params.id
+
    return {};
 };

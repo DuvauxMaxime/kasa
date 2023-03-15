@@ -4,7 +4,7 @@ const Person = (props) => {
    return (
       <div className={styles.container}>
          <p>{props.name}</p>
-         <img src={props.img} alt={props.name} />
+         <img className={styles.image} src={props.img} alt={props.name} />
       </div>
    );
 };

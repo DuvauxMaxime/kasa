@@ -7,15 +7,9 @@ import LocationLocation from '../components/LocationLocation';
 import TagLocation from '../components/TagLocation';
 
 const Location = () => {
-   let { id } = useParams();
-   console.log('==================> id <================');
-   console.log(id);
-   const dataLocation = dataLocations.find((location) => location.id === id);
-   console.log('============> dataLocation <==============');
-   console.log(dataLocation);
+   let { id } = useParams(); //récupère l'id de la location dans l'URL
+   const dataLocation = dataLocations.find((location) => location.id === id); //cherche parmis la DB les datas de l'Id
    const tags = dataLocation.tags;
-   console.log('===========> tags <=========');
-   console.log(tags);
 
    return (
       <div className={styles.container}>

@@ -5,6 +5,7 @@ import TitleLocation from '../components/TitleLocation';
 import styles from './Location.module.css';
 import LocationLocation from '../components/LocationLocation';
 import TagLocation from '../components/TagLocation';
+import Person from '../components/Person';
 
 const Location = () => {
    let { id } = useParams(); //récupère l'id de la location dans l'URL
@@ -17,8 +18,13 @@ const Location = () => {
             src={dataLocation.cover}
             alt={'appartement' + dataLocation.title}
          />
-         <TitleLocation title={dataLocation.title} />
-         <LocationLocation location={dataLocation.location} />
+         <div className={styles.identityBlock}>
+            <div className={styles.infosLocation}>
+               <TitleLocation title={dataLocation.title} />
+               <LocationLocation location={dataLocation.location} />
+            </div>
+            <Person className={styles.infosPerson} />
+         </div>
          <span className={styles.tags}>
             {tags.map((tag, index) => (
                <TagLocation key={tag + index} tag={tag} />

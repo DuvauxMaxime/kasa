@@ -20,8 +20,8 @@ const Location = () => {
          <TitleLocation title={dataLocation.title} />
          <LocationLocation location={dataLocation.location} />
          <span className={styles.tags}>
-            {tags.map((tag) => (
-               <TagLocation tag={tag} />
+            {tags.map((tag, index) => (
+               <TagLocation key={tag + index} tag={tag} />
             ))}
          </span>
       </div>

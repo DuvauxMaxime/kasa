@@ -8,7 +8,7 @@ const Collapse = () => {
       setActive(!active);
    };
    return (
-      <div className={`${active && styles.active}`}>
+      <div className={active && styles.active}>
          <div className={styles.titleContainer}>
             <h1 className={styles.title}>Spécificités</h1>
             <img

@@ -12,6 +12,7 @@ const Location = () => {
    let { id } = useParams(); //récupère l'id de la location dans l'URL
    const dataLocation = dataLocations.find((location) => location.id === id); //cherche parmis la DB les datas de l'Id
    const tags = dataLocation.tags;
+   console.log(dataLocation.rating);
 
    return (
       <div className={styles.container}>

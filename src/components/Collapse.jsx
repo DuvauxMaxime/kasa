@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import dropDownClose from '../assets/dropDownClose.svg';
 import styles from './Collapse.module.css';
 
-const Collapse = () => {
+const Collapse = ({ title, content }) => {
    const [active, setActive] = useState(false);
    const handleToggle = (e) => {
       setActive(!active);
    };
    return (
-      <div className={active && styles.active}>
+      <div className={`${styles.container} ${active ? styles.active : null}`}>
          <div className={styles.titleContainer}>
-            <h1 className={styles.title}>Spécificités</h1>
+            <h1 className={styles.title}>{title}</h1>
             <img
                src={dropDownClose}
                className={styles.icon}
@@ -18,9 +18,7 @@ const Collapse = () => {
                alt="click"
             />
          </div>
-         <p className={styles.content}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eius!
-         </p>
+         <p className={styles.content}>{content}</p>
       </div>
    );
 };

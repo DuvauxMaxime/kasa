@@ -1,13 +1,7 @@
 import styles from './Carrousel.module.css';
 
-const Carrousel = (props) => {
-   return (
-      <img
-         src={props.src}
-         alt={'appartement' + props.alt}
-         className={styles.image}
-      />
-   );
+const Carrousel = ({ src, alt }) => {
+   return <img src={src} alt={'appartement' + alt} className={styles.image} />;
 };
 
 export default Carrousel;

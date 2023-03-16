@@ -3,8 +3,10 @@ import home from '../assets/home.svg';
 import styles from './Home.module.css';
 import Card from '../components/Card';
 import dataLocations from '../data/logements.json';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
+   const locations = useLoaderData();
    return (
       <div className={styles.container}>
          <Banner
@@ -13,7 +15,7 @@ const Home = () => {
             text="Chez vous, partout et ailleurs"
          />
          <div className={styles.section}>
-            {dataLocations.map((location) => (
+            {locations.map((location) => (
                <Card
                   key={location.id}
                   id={location.id}
@@ -29,5 +31,5 @@ const Home = () => {
 export default Home;
 
 export const locationsLoader = () => {
-   return { dataLocations };
+   return dataLocations;
 };

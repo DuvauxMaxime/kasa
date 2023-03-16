@@ -7,12 +7,15 @@ import LocationLocation from '../components/LocationLocation';
 import TagLocation from '../components/TagLocation';
 import Person from '../components/Person';
 import RateLocation from '../components/RateLocation';
+import Collapse from '../components/Collapse';
 
 const Location = () => {
    let { id } = useParams(); //récupère l'id de la location dans l'URL
    const dataLocation = dataLocations.find((location) => location.id === id); //cherche parmis la DB les datas de l'Id
    const tags = dataLocation.tags;
-   console.log(dataLocation.rating);
+   const equipmentsList = dataLocation.equipments.map((equipment, index) => (
+      <li key={index}>{equipment}</li>
+   ));
 
    return (
       <div className={styles.container}>
@@ -42,12 +45,27 @@ const Location = () => {
             <RateLocation />
             <RateLocation />
          </div>
+         <div>
+            <Collapse
+               key="description"
+               title="Description"
+               content={dataLocation.description}
+            />
+            <Collapse
+               className={styles.equipments}
+               key="equipment"
+               title="Équipements"
+               content={equipmentsList}
+            />
+         </div>
       </div>
    );
 };
 
 export default Location;
 
-export const locationLoader = () => {
+export const locationLoader = ({ params }) => {
+   // params.id
+
    return {};
 };

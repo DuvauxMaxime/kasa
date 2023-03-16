@@ -1,5 +1,8 @@
 .container{
-    width: 100%;
+    width: 86.11%;
+}
+
+.active .container{
 }
 
 .titleContainer{
@@ -40,6 +43,7 @@
     margin: 0;
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;
+    height: 0px;
 }
 
 .active .content{
@@ -47,9 +51,9 @@
     z-index: -1;
     position: relative;
     top: -20px;
-    padding: 20px 0 0 0 ;
+    padding: 30px 0 30px 0 ;
     width: 100%;
-    min-height: 146px;
+    height: fit-content;
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;
 }

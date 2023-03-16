@@ -5,10 +5,22 @@ const Navigation = () => {
    return (
       <nav className={styles.navBar}>
          <ul>
-            <NavLink to="/" className={styles.navLink}>
+            <NavLink
+               style={({ isActive }) => {
+                  return { textDecoration: isActive ? 'underline' : '' };
+               }}
+               to="/"
+               className={styles.navLink}
+            >
                <li>Accueil</li>
             </NavLink>
-            <NavLink to="/a-propos/" className={styles.navLink}>
+            <NavLink
+               style={({ isActive }) => {
+                  return { textDecoration: isActive ? 'underline' : '' };
+               }}
+               to="/a-propos/"
+               className={styles.navLink}
+            >
                <li>A Propos</li>
             </NavLink>
          </ul>

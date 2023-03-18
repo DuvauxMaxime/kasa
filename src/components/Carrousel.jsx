@@ -1,7 +1,12 @@
 import styles from './Carrousel.module.css';
 
-const Carrousel = ({ src, alt }) => {
-   return <img src={src} alt={'appartement' + alt} className={styles.image} />;
+const Carrousel = ({ src, alt, data }) => {
+   const tabPictures = data;
+   console.log('------------> Tab Pictures <---------------');
+   console.log(tabPictures);
+   return (
+      <img src={tabPictures[2]} alt="appartement" className={styles.image} />
+   );
 };
 
 export default Carrousel;

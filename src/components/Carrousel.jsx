@@ -24,6 +24,9 @@ const Carrousel = ({ src, alt, data }) => {
             className={styles.moveRight}
             alt="flèche directionnelle droite"
          />
+         <p className={styles.indicator}>
+            {defaultIndex + 1}/{numberOfPictures}
+         </p>
       </div>
    );
 };

@@ -38,7 +38,3 @@
 .disableDisplay .moveLeft, .disableDisplay .indicator, .disableDisplay .moveRight{
     visibility: hidden;
 }
-
-.displayMoveLeft .moveLeft{
-    visibility: hidden;
-}

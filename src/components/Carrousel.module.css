@@ -14,10 +14,31 @@
     position: absolute;
     top: 300px;
     left: 8.5%;
+    width: 3.5%;
 }
 
 .moveRight{
     position: absolute;
     top: 300px;
     right: 8.5%;
+    width: 3.5%;
+}
+
+.indicator{
+    position: absolute;
+    top: 484px;
+    left: 50%;
+    color: white;
+    font-family: 'montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+.disableDisplay .moveLeft, .disableDisplay .indicator, .disableDisplay .moveRight{
+    visibility: hidden;
+}
+
+.displayMoveLeft .moveLeft{
+    visibility: hidden;
 }

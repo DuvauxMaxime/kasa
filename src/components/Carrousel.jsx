@@ -13,7 +13,6 @@ const Carrousel = ({ data }) => {
    let viewablePicture = data[index]; // Photo visible
    const numberOfPictures = tabPictures.length; // Nombre de photos pour la location
    // Fonction changer image à gauche
-
    const leftMove = (e) => {
       (index > 0 && setIndex(index - 1)) ||
          (index === 0 && setIndex(numberOfPictures - 1));

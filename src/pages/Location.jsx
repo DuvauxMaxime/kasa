@@ -1,13 +1,9 @@
 import { useParams } from 'react-router-dom';
 import dataLocations from '../data/logements.json';
 import Carrousel from '../components/Carrousel';
-import TitleLocation from '../components/TitleLocation';
 import styles from './Location.module.css';
-import LocationLocation from '../components/LocationLocation';
-import TagLocation from '../components/TagLocation';
-import Person from '../components/Person';
-import RateLocation from '../components/RateLocation';
 import Collapse from '../components/Collapse';
+import FeaturesLocation from '../components/FeaturesLocation';
 
 const Location = () => {
    let { id } = useParams(); //récupère l'id de la location dans l'URL
@@ -27,24 +23,14 @@ const Location = () => {
             src={dataLocation.cover}
             alt={'appartement' + dataLocation.title}
          />
-         <div className={styles.identityBlock}>
-            <div className={styles.infosLocation}>
-               <TitleLocation title={dataLocation.title} />
-               <LocationLocation location={dataLocation.location} />
-            </div>
-            <Person
-               name={dataLocation.host.name}
-               img={dataLocation.host.picture}
-            />
-         </div>
-         <div className={styles.tagRatesBlock}>
-            <span className={styles.tags}>
-               {tags.map((tag, index) => (
-                  <TagLocation key={tag + index} tag={tag} />
-               ))}
-            </span>
-            <RateLocation rating={dataLocation.rating} />
-         </div>
+         <FeaturesLocation
+            title={dataLocation.title}
+            location={dataLocation.location}
+            owner={dataLocation.host.name}
+            picture={dataLocation.host.picture}
+            tags={dataLocation.tags}
+            score={dataLocation.rating}
+         />
          <div>
             <Collapse
                key="description"

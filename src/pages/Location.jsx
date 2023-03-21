@@ -31,18 +31,21 @@ const Location = () => {
             tags={dataLocation.tags}
             score={dataLocation.rating}
          />
-         <div>
-            <Collapse
-               key="description"
-               title="Description"
-               content={dataLocation.description}
-            />
-            <Collapse
-               className={styles.equipments}
-               key="equipment"
-               title="Équipements"
-               content={equipmentsList}
-            />
+         <div className={styles.collapse}>
+            <div className={styles.collapseLeft}>
+               <Collapse
+                  key="description"
+                  title="Description"
+                  content={dataLocation.description}
+               />
+            </div>
+            <div className={styles.collapseRight}>
+               <Collapse
+                  key="equipment"
+                  title="Équipements"
+                  content={equipmentsList}
+               />
+            </div>
          </div>
       </div>
    );

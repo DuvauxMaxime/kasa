@@ -52,7 +52,11 @@ const Location = () => {
 export default Location;
 
 export const locationLoader = ({ params }) => {
-   // params.id
-
-   return {};
+   const locationId = params.id;
+   const dataLocation = dataLocations.find(
+      (location) => location.id === locationId
+   ); //cherche parmis la DB les datas de l'Id
+   console.log('===========> DATA');
+   console.log(dataLocation);
+   return { dataLocation };
 };

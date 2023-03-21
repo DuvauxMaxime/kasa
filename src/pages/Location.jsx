@@ -19,13 +19,11 @@ const Location = () => {
    const equipmentsList = dataLocation.equipments.map((equipment, index) => (
       <li key={index}>{equipment}</li>
    ));
-   // Rating location
-   console.log('==========> Location RATING <=========');
-   console.log(dataLocation.rating);
 
    return (
       <div className={styles.container}>
          <Carrousel
+            data={dataLocation.pictures}
             src={dataLocation.cover}
             alt={'appartement' + dataLocation.title}
          />

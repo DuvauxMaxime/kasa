@@ -3,7 +3,7 @@ import moveRight from '../assets/moveRight.svg';
 import { useState } from 'react';
 import styles from './Carrousel.module.css';
 
-const Carrousel = ({ src, alt, data }) => {
+const Carrousel = ({ data }) => {
    const [index, setIndex] = useState(0); // Définit index de la photo à afficher
    const [disableDisplay, setDisableDisplay] = useState(false); // Définit si les éléments de navigation du carrousel sont visibles
    const displayMoveAndIndicator = (e) => {
@@ -12,10 +12,13 @@ const Carrousel = ({ src, alt, data }) => {
    const tabPictures = data; // Tab des photos
    let viewablePicture = data[index]; // Photo visible
    const numberOfPictures = tabPictures.length; // Nombre de photos pour la location
+   // Fonction changer image à gauche
+
    const leftMove = (e) => {
       (index > 0 && setIndex(index - 1)) ||
          (index === 0 && setIndex(numberOfPictures - 1));
    };
+   // Fonction changer image à droite
    const rightMove = (e) => {
       (index < numberOfPictures - 1 && setIndex(index + 1)) ||
          (index === numberOfPictures - 1 && setIndex(0));

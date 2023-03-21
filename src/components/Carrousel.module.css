@@ -24,6 +24,17 @@
     width: 3.5%;
 }
 
+
+.moveLeft:hover{
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
+.moveRight:hover{
+    cursor: pointer;
+    filter: brightness(95%);
+}
+
 .indicator{
     position: absolute;
     top: 484px;

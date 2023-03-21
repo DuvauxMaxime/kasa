@@ -10,9 +10,17 @@ const About = () => {
    return (
       <div className={styles.container}>
          <Banner src={about} alt="Torrent au milieu de montagnes" text="" />
-         {aboutData.map((about, index) => (
-            <Collapse key={index} title={about.title} content={about.contain} />
-         ))}
+         <div className={styles.collapsePart}>
+            {aboutData.map((about, index) => (
+               <div className={styles.collapse}>
+                  <Collapse
+                     key={index}
+                     title={about.title}
+                     content={about.contain}
+                  />
+               </div>
+            ))}
+         </div>
       </div>
    );
 };

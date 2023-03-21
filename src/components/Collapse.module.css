@@ -1,9 +1,5 @@
-.container{
-    width: 86.11%;
-}
 
 .titleContainer{
-    width: 100%;
     margin: 31px 0 0 0;
     padding: 0 18px;
     display: flex;
@@ -24,7 +20,7 @@
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 24px;
-    color: white;
+    color: #ffffff;
 }
 
 .active .icon{
@@ -35,21 +31,26 @@
     visibility: hidden;
     z-index: -1;
     position: relative;
-    top: -20px;
-    padding: 20px 0 0 0 ;
+    top: -10px;
+    padding: 40px 12px 53px 20px;
     margin: 0;
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;
     height: 0px;
+    color: #FF6060;
+    font-family: 'montserrat';
+    font:18px;
+    font-weight: 400;
+    line-height: 22px;
+    list-style: none;
 }
+
+
 
 .active .content{
     visibility:visible;
     z-index: -1;
     position: relative;
-    top: -20px;
-    padding: 30px 0 30px 0 ;
-    width: 100%;
     height: fit-content;
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;

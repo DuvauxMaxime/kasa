@@ -6,4 +6,17 @@
 }
 
 
+.collapse{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 86.11%;
+}
 
+.collapseLeft{
+    width: 47%;
+}
+
+.collapseRight{
+    width: 47%;
+}

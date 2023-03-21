@@ -4,19 +4,29 @@ import { useState } from 'react';
 import styles from './Carrousel.module.css';
 
 const Carrousel = ({ src, alt, data }) => {
-   const [index, setIndex] = useState(0);
-   const tabPictures = data;
-   // let viewablePictureIndex = 0;
-   let viewablePicture = data[index];
-   const numberOfPictures = tabPictures.length;
+   const [index, setIndex] = useState(0); // Définit index de la photo à afficher
+   const [disableDisplay, setDisableDisplay] = useState(false); // Définit si les éléments de navigation du carrousel sont visibles
+   const displayMoveAndIndicator = (e) => {
+      numberOfPictures <= 1 && setDisableDisplay(!disableDisplay);
+   };
+   const tabPictures = data; // Tab des photos
+   let viewablePicture = data[index]; // Photo visible
+   const numberOfPictures = tabPictures.length; // Nombre de photos pour la location
    const leftMove = (e) => {
-      index > 0 && setIndex(index - 1);
+      (index > 0 && setIndex(index - 1)) ||
+         (index === 0 && setIndex(numberOfPictures - 1));
    };
    const rightMove = (e) => {
-      index < numberOfPictures - 1 && setIndex(index + 1);
+      (index < numberOfPictures - 1 && setIndex(index + 1)) ||
+         (index === numberOfPictures - 1 && setIndex(0));
    };
    return (
-      <div className={styles.container}>
+      <div
+         className={`${styles.container} ${
+            disableDisplay ? styles.disableDisplay : null
+         }`}
+         onLoad={displayMoveAndIndicator}
+      >
          <img
             src={viewablePicture}
             alt="appartement"

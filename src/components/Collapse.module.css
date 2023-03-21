@@ -14,6 +14,7 @@
 .titleContainer:hover, .active .titleContainer{
     cursor: pointer;
     filter: brightness(90%);
+  
 }
 
 .title{
@@ -29,17 +30,15 @@
 
 .content{
     visibility: hidden;
-    z-index: -1;
-    position: relative;
-    top: -10px;
+    position: absolute;
+    top: -20px;
     padding: 40px 12px 53px 20px;
-    margin: 0;
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;
-    height: 0px;
     color: #FF6060;
     font-family: 'montserrat';
-    font:18px;
+    font: 18px;
+    height: 0px;
     font-weight: 400;
     line-height: 22px;
     list-style: none;
@@ -48,9 +47,9 @@
 
 
 .active .content{
-    visibility:visible;
     z-index: -1;
     position: relative;
+    visibility:visible;
     height: fit-content;
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;

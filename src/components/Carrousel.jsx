@@ -1,5 +1,6 @@
 import moveLeft from '../assets/moveLeft.svg';
 import moveRight from '../assets/moveRight.svg';
+import bulletPoint from '../assets/bulletPoint.png';
 import { useState } from 'react';
 import styles from './Carrousel.module.css';
 
@@ -46,6 +47,17 @@ const Carrousel = ({ data }) => {
             alt="flèche directionnelle droite"
             onClick={rightMove}
          />
+         <div className={styles.bulletPart}>
+            {tabPictures.map((index) => (
+               <img
+                  key={index}
+                  src={bulletPoint}
+                  className={styles.bulletPoint}
+                  alt="bullet point"
+               />
+            ))}
+         </div>
+
          <p className={styles.indicator}>
             {index + 1}/{numberOfPictures}
          </p>

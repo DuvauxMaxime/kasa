@@ -9,8 +9,6 @@ const Location = () => {
    let { id } = useParams(); //récupère l'id de la location dans l'URL
    // Données locations
    const dataLocation = dataLocations.find((location) => location.id === id); //cherche parmis la DB les datas de l'Id
-   //Tags location
-   const tags = dataLocation.tags;
    //Liste d'équipements
    const equipmentsList = dataLocation.equipments.map((equipment, index) => (
       <li key={index}>{equipment}</li>
@@ -54,7 +52,11 @@ const Location = () => {
 export default Location;
 
 export const locationLoader = ({ params }) => {
-   // params.id
-
-   return {};
+   const locationId = params.id;
+   const dataLocation = dataLocations.find(
+      (location) => location.id === locationId
+   ); //cherche parmis la DB les datas de l'Id
+   console.log('===========> DATA');
+   console.log(dataLocation);
+   return { dataLocation };
 };

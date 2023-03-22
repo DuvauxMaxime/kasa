@@ -1,5 +1,5 @@
-import moveLeft from '../assets/moveLeft.svg';
-import moveRight from '../assets/moveRight.svg';
+import preview from '../assets/preview.svg';
+import next from '../assets/next.svg';
 import bulletPoint from '../assets/bulletPoint.png';
 import { useState } from 'react';
 import styles from './Carrousel.module.css';
@@ -7,46 +7,38 @@ import styles from './Carrousel.module.css';
 const Carrousel = ({ data }) => {
    const [index, setIndex] = useState(0); // Définit index de la photo à afficher
    const [disableDisplay, setDisableDisplay] = useState(false); // Définit si les éléments de navigation du carrousel sont visibles
-   const displayMoveAndIndicator = (e) => {
+   const displayMoveAndIndicator = () => {
       numberOfPictures <= 1 && setDisableDisplay(!disableDisplay);
    };
    const tabPictures = data; // Tab des photos
    let viewablePicture = data[index]; // Photo visible
    const numberOfPictures = tabPictures.length; // Nombre de photos pour la location
    // Fonction changer image à gauche
-   const leftMove = (e) => {
+   const handlePrev = () => {
       (index > 0 && setIndex(index - 1)) ||
          (index === 0 && setIndex(numberOfPictures - 1));
    };
    // Fonction changer image à droite
-   const rightMove = (e) => {
+   const handleNext = () => {
       (index < numberOfPictures - 1 && setIndex(index + 1)) ||
          (index === numberOfPictures - 1 && setIndex(0));
    };
    // Fonction bullet point
-   const moveBullet = (e) => {
-      index !== e.target.__reactFiber$88gm81x2zqe.index &&
-         setIndex(e.target.__reactFiber$88gm81x2zqe.index);
+   const moveBullet = (index) => {
+      setIndex(index);
    };
-   // const displayBullet = (e) => {
-   //    console.log('======================> BULLET POINT INDEX VIEWABLE');
-   //    console.log(
-   //       (bulletPointIndexViewable.props.className += `${styles.displayBullet}`)
-   //    );
-   // };
-   const bulletPoints = tabPictures.map((index) => (
+
+   const bulletPoints = tabPictures.map((picture, index) => (
       <img
-         key={index}
+         key={picture}
          src={bulletPoint}
          className={styles.bulletPoint}
          alt="bullet point"
-         onClick={moveBullet}
+         onClick={() => {
+            moveBullet(index);
+         }}
       />
    ));
-   const bulletPointIndexViewable = bulletPoints.find(
-      (bulletPoint) => bulletPoint.key === bulletPoints[index].key
-   );
-   console.log(bulletPointIndexViewable);
    return (
       <div
          className={`${styles.container} ${
@@ -60,16 +52,16 @@ const Carrousel = ({ data }) => {
             className={styles.image}
          />
          <img
-            src={moveLeft}
-            className={styles.moveLeft}
+            src={preview}
+            className={styles.preview}
             alt="flèche directionnelle gauche"
-            onClick={leftMove}
+            onClick={handlePrev}
          />
          <img
-            src={moveRight}
-            className={styles.moveRight}
+            src={next}
+            className={styles.next}
             alt="flèche directionnelle droite"
-            onClick={rightMove}
+            onClick={handleNext}
          />
          <div className={styles.bulletPart}>{bulletPoints}</div>
 

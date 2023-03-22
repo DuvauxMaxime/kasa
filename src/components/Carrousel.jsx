@@ -23,6 +23,30 @@ const Carrousel = ({ data }) => {
       (index < numberOfPictures - 1 && setIndex(index + 1)) ||
          (index === numberOfPictures - 1 && setIndex(0));
    };
+   // Fonction bullet point
+   const moveBullet = (e) => {
+      index !== e.target.__reactFiber$88gm81x2zqe.index &&
+         setIndex(e.target.__reactFiber$88gm81x2zqe.index);
+   };
+   // const displayBullet = (e) => {
+   //    console.log('======================> BULLET POINT INDEX VIEWABLE');
+   //    console.log(
+   //       (bulletPointIndexViewable.props.className += `${styles.displayBullet}`)
+   //    );
+   // };
+   const bulletPoints = tabPictures.map((index) => (
+      <img
+         key={index}
+         src={bulletPoint}
+         className={styles.bulletPoint}
+         alt="bullet point"
+         onClick={moveBullet}
+      />
+   ));
+   const bulletPointIndexViewable = bulletPoints.find(
+      (bulletPoint) => bulletPoint.key === bulletPoints[index].key
+   );
+   console.log(bulletPointIndexViewable);
    return (
       <div
          className={`${styles.container} ${
@@ -47,16 +71,7 @@ const Carrousel = ({ data }) => {
             alt="flèche directionnelle droite"
             onClick={rightMove}
          />
-         <div className={styles.bulletPart}>
-            {tabPictures.map((index) => (
-               <img
-                  key={index}
-                  src={bulletPoint}
-                  className={styles.bulletPoint}
-                  alt="bullet point"
-               />
-            ))}
-         </div>
+         <div className={styles.bulletPart}>{bulletPoints}</div>
 
          <p className={styles.indicator}>
             {index + 1}/{numberOfPictures}

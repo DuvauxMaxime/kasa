@@ -19,7 +19,7 @@ const Location = () => {
          <Carrousel
             data={dataLocation.pictures}
             src={dataLocation.cover}
-            alt={'appartement' + dataLocation.title}
+            alt={dataLocation.title}
          />
          <FeaturesLocation
             title={dataLocation.title}

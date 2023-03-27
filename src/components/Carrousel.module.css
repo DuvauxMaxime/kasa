@@ -70,6 +70,6 @@
     visibility: hidden;
 }
 
-.displayActiveBullet{
-    width: 40px;
+.activeBullet .bulletPoint{
+    width: 60px;
 }

@@ -6,11 +6,11 @@ import styles from './Carrousel.module.css';
 
 const Carrousel = ({ data }) => {
    const [index, setIndex] = useState(0); // Définit index de la photo à afficher
-   const [disableDisplay, setDisableDisplay] = useState(false); // Définit si les éléments de navigation du carrousel sont visibles
+   const [display, setDisplay] = useState(false); // Définit l'affichage des éléments (navigation et bulletpoints)
    const tabPictures = data; // Tableau des photos
    const displayMoveAndIndicator = () => {
       // Conditions d'affichage des éléments de navigation du carroussel - Hidden si nombre de photos <= 1
-      tabPictures.length <= 1 && setDisableDisplay(!disableDisplay);
+      tabPictures.length <= 1 && setDisplay(!display);
    };
    let viewablePicture = data[index]; // Photo visible
    // Fonction image précédente
@@ -39,23 +39,18 @@ const Carrousel = ({ data }) => {
          }}
       />
    ));
-   console.log('================> bullet points <================');
-   console.log(bulletPoints);
-   console.log('=========> index <=================');
-   console.log(index);
-   console.log('========> bullet points index <===========');
-   console.log(bulletPoints[index]);
    return (
       <div
          className={`${styles.container} ${
-            disableDisplay ? styles.disableDisplay : null
+            // Injecte le style qui masque les éléments de navigation (si nombre de pictures <= 1)
+            display ? styles.disableDisplay : null
          }`}
-         onLoad={displayMoveAndIndicator}
       >
          <img
             src={viewablePicture}
             alt="appartement"
             className={styles.image}
+            onLoad={displayMoveAndIndicator} // Déclenche la fonction display des éléments de navigation du carroussel
          />
          <img
             src={preview}
@@ -70,8 +65,8 @@ const Carrousel = ({ data }) => {
             onClick={handleNext}
          />
          <div className={styles.bulletPart}>{bulletPoints}</div>
-
          <p className={styles.indicator}>
+            {/* Correction de l'index de la photo (+1) */}
             {index + 1}/{tabPictures.length}
          </p>
       </div>

@@ -1,6 +1,4 @@
-
 .titleContainer{
-    margin: 31px 0 0 0;
     padding: 0 18px;
     display: flex;
     justify-content: space-between;
@@ -44,8 +42,6 @@
     list-style: none;
 }
 
-
-
 .active .content{
     z-index: -1;
     position: relative;
@@ -54,3 +50,11 @@
     background-color: #F7F7F7;
     border-radius: 0 0 5px 5px;
 }
+
+@media screen and (max-width: 376px) {
+    .active .content{
+        margin: 0;
+    }
+    
+    
+  }

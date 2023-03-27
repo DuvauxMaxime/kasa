@@ -16,3 +16,12 @@
     background-color: #F7F7F7;
     border-radius: 25px;
 }
+
+@media screen and (max-width: 376px) {
+    .section{
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    
+  }

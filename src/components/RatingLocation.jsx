@@ -9,9 +9,19 @@ const RatingLocation = ({ score }) => {
       <span className={styles.rating}>
          {ratingTab.map((value, index) =>
             value <= score ? (
-               <img src={star} alt="étoile colorée" key={'star' + index} />
+               <img
+                  className={styles.star}
+                  src={star}
+                  alt="étoile colorée"
+                  key={'star' + index}
+               />
             ) : (
-               <img src={starGrey} alt="étoile grisée" key={'star' + index} />
+               <img
+                  className={styles.star}
+                  src={starGrey}
+                  alt="étoile grisée"
+                  key={'star' + index}
+               />
             )
          )}
       </span>

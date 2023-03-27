@@ -1,12 +1,12 @@
 .kasaLogo{
-    padding: 40px 0 0 100px;
+    padding: 40px 0 0 6.94%;
     width: 14.58%;
     max-height: 68px;
 }
 
 @media screen and (max-width: 376px) {
     .kasaLogo{
-        padding: 20px 0 0 20px;
+        padding: 20px 0 0 5.33%;
         width: 38.67%;
     }
     

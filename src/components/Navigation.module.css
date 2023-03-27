@@ -1,6 +1,6 @@
 .navBar {
     display: flex;
-    padding : 57px 100px 0 0 ; 
+    padding : 57px 6.94% 0 0 ; 
 }
 
 .navBar ul{
@@ -23,19 +23,16 @@
 
 @media screen and (max-width: 376px) {
     .navBar{
-        padding: 38px 20px 0 0;
-
+        padding: 28px 5.33% 0 0;
     }
-
     .navBar ul{
        padding-left: 0;
     }
-
     .navLink{
         font-size: 0.75rem;
         text-transform: uppercase;
         width:80px;
         text-align: center;
-    
+
     }
   }

@@ -35,7 +35,7 @@
     border-radius: 0 0 5px 5px;
     color: #FF6060;
     font-family: 'montserrat';
-    font: 18px;
+    font-size: 18px;
     height: 0px;
     font-weight: 400;
     line-height: 22px;
@@ -55,6 +55,13 @@
     .active .content{
         margin: 0;
     }
-    
+    .title{
+        font-size: 0.813rem;
+        margin: 6px 0;
+    }
+    .content{
+        padding: 30px 12px 0px 10px;
+        font-size: 0.75rem;
+    }
     
   }

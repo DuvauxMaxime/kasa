@@ -22,3 +22,16 @@
     gap:10px;
     margin: 23px 0 0 0;
 }
+
+@media screen and (max-width: 376px) {
+    .tags{
+    margin: 12px 0 0 0;
+    flex-wrap: wrap;
+    }
+    .tag{
+        width: 22.4%;
+        min-width: 85px;
+        min-height: 18px;
+        font-size: 0.625rem;
+    }
+}

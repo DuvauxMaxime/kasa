@@ -12,7 +12,6 @@
 .titleContainer:hover, .active .titleContainer{
     cursor: pointer;
     filter: brightness(90%);
-  
 }
 
 .title{

@@ -1,0 +1,24 @@
+.tag{
+    width: 13.28%;
+    min-width: 115px;
+    min-height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    margin: 0;
+    background-color: #FF6060;
+    border-radius: 10px;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap:10px;
+    margin: 23px 0 0 0;
+}

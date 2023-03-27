@@ -10,14 +10,14 @@
     border-radius: 25px;
 }
 
-.moveLeft{
+.preview{
     position: absolute;
     top: 300px;
     left: 8.5%;
     width: 3.5%;
 }
 
-.moveRight{
+.next{
     position: absolute;
     top: 300px;
     right: 8.5%;
@@ -25,12 +25,12 @@
 }
 
 
-.moveLeft:hover{
+.preview:hover{
     cursor: pointer;
     filter: brightness(95%);
 }
 
-.moveRight:hover{
+.next:hover{
     cursor: pointer;
     filter: brightness(95%);
 }
@@ -43,27 +43,33 @@
     width: 86.11%
 }
 .bulletPoint{
-    width: 10px;
+    width: 20px;
     padding: 10px;
-    opacity: 0.7;
+
 }
 
 .bulletPoint:hover{
    transform: scale(1.8);
-   opacity: 1;
 }
 
 .indicator{
     position: absolute;
+    display: flex;
+    justify-content: center;
     top: 484px;
-    left: 50%;
     color: white;
     font-family: 'montserrat';
     font-size: 18px;
     font-weight: 500;
+    width: 86.11%
+
     
 }
 
-.disableDisplay .moveLeft, .disableDisplay .indicator, .disableDisplay .moveRight{
+.disableDisplay .preview, .disableDisplay .indicator, .disableDisplay .next, .disableDisplay .bulletPart{
     visibility: hidden;
+}
+
+.activeBullet .bulletPoint{
+    width: 60px;
 }

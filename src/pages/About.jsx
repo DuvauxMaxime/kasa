@@ -12,12 +12,8 @@ const About = () => {
          <Banner src={about} alt="Torrent au milieu de montagnes" text="" />
          <div className={styles.collapsePart}>
             {aboutData.map((about, index) => (
-               <div className={styles.collapse}>
-                  <Collapse
-                     key={index}
-                     title={about.title}
-                     content={about.contain}
-                  />
+               <div key={index} className={styles.collapse}>
+                  <Collapse title={about.title} content={about.contain} />
                </div>
             ))}
          </div>

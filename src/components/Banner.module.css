@@ -25,6 +25,24 @@
     margin: 0;
     font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 48px;
+    font-size: 3rem;
     color: white;
 }
+
+@media screen and (max-width: 376px) {
+    .container{
+        margin-top: 16px;
+        width: 89.33%;
+        height: 111px;
+    }
+    .image{
+        border-radius: 10px;
+    }
+    .title {
+        font-size: 1.5rem;
+        text-align: start;
+        top:-115px;   
+        width: 65%;
+        padding: 0 0 0 16px;
+    }
+  }

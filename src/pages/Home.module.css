@@ -16,3 +16,15 @@
     background-color: #F7F7F7;
     border-radius: 25px;
 }
+
+@media screen and (max-width: 376px) {
+    .section{
+        grid-template-columns: repeat(1, 1fr);
+        background-color: #ffffff;
+        padding: 0px 21px;
+        margin: 21px 0;
+        width: 90%;
+        grid-gap: 20px;
+    }
+    
+  }

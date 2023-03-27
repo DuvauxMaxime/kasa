@@ -3,3 +3,11 @@
     width: 14.58%;
     max-height: 68px;
 }
+
+@media screen and (max-width: 376px) {
+    .kasaLogo{
+        padding: 20px 0 0 20px;
+        width: 38.67%;
+    }
+    
+  }

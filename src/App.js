@@ -26,22 +26,5 @@ const router = createBrowserRouter(
 );
 
 export const App = () => {
-   return (
-      <RouterProvider router={router} />
-      // <div>
-      //    <header className={styles.header}>
-      //       <Banner />
-      //       <Navigation />
-      //    </header>
-      //    <Routes>
-      //       <Route path="/" element={<Home />} />
-      //       <Route path="/a-propos/" element={<About />} />
-      //       <Route path="/location/" element={<Location />} />
-      //       <Route path="/*" element={<Error />} />
-      //    </Routes>
-      //    <footer>
-      //       <Footer />
-      //    </footer>
-      // </div>
-   );
+   return <RouterProvider router={router} />;
 };

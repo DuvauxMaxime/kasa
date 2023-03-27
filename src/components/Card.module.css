@@ -21,10 +21,18 @@
     display: inline-flex;
     align-items: center;
     height: 52px;
-
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 18px;
     margin:0;
-  
 }
+
+@media screen and (max-width: 376px) {
+    .card{
+        height: 255px;
+    }
+    .title{
+        padding : 2px 5px 5px 10px ;
+        
+    }
+  }

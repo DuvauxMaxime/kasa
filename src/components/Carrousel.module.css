@@ -54,15 +54,22 @@
 
 .indicator{
     position: absolute;
+    display: flex;
+    justify-content: center;
     top: 484px;
-    left: 50%;
     color: white;
     font-family: 'montserrat';
     font-size: 18px;
     font-weight: 500;
+    width: 86.11%
+
     
 }
 
-.disableDisplay .preview, .disableDisplay .indicator, .disableDisplay .next{
+.disableDisplay .preview, .disableDisplay .indicator, .disableDisplay .next, .disableDisplay .bulletPart{
     visibility: hidden;
+}
+
+.displayActiveBullet{
+    width: 40px;
 }

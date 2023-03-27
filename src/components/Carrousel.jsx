@@ -7,27 +7,27 @@ import styles from './Carrousel.module.css';
 const Carrousel = ({ data }) => {
    const [index, setIndex] = useState(0); // Définit index de la photo à afficher
    const [disableDisplay, setDisableDisplay] = useState(false); // Définit si les éléments de navigation du carrousel sont visibles
+   const tabPictures = data; // Tableau des photos
    const displayMoveAndIndicator = () => {
-      numberOfPictures <= 1 && setDisableDisplay(!disableDisplay);
+      // Conditions d'affichage des éléments de navigation du carroussel - Hidden si nombre de photos <= 1
+      tabPictures.length <= 1 && setDisableDisplay(!disableDisplay);
    };
-   const tabPictures = data; // Tab des photos
    let viewablePicture = data[index]; // Photo visible
-   const numberOfPictures = tabPictures.length; // Nombre de photos pour la location
-   // Fonction changer image à gauche
+   // Fonction image précédente
    const handlePrev = () => {
       (index > 0 && setIndex(index - 1)) ||
-         (index === 0 && setIndex(numberOfPictures - 1));
+         (index === 0 && setIndex(tabPictures.length - 1));
    };
-   // Fonction changer image à droite
+   // Fonction image suivante
    const handleNext = () => {
-      (index < numberOfPictures - 1 && setIndex(index + 1)) ||
-         (index === numberOfPictures - 1 && setIndex(0));
+      (index < tabPictures.length - 1 && setIndex(index + 1)) ||
+         (index === tabPictures.length - 1 && setIndex(0));
    };
-   // Fonction bullet point
+   // Fonction définir une image depuis un bullet point
    const moveBullet = (index) => {
       setIndex(index);
    };
-
+   // Fonction de création des bullets en fonction du nombre de photos dans le carroussel
    const bulletPoints = tabPictures.map((picture, index) => (
       <img
          key={picture}
@@ -39,6 +39,12 @@ const Carrousel = ({ data }) => {
          }}
       />
    ));
+   console.log('================> bullet points <================');
+   console.log(bulletPoints);
+   console.log('=========> index <=================');
+   console.log(index);
+   console.log('========> bullet points index <===========');
+   console.log(bulletPoints[index]);
    return (
       <div
          className={`${styles.container} ${
@@ -66,7 +72,7 @@ const Carrousel = ({ data }) => {
          <div className={styles.bulletPart}>{bulletPoints}</div>
 
          <p className={styles.indicator}>
-            {index + 1}/{numberOfPictures}
+            {index + 1}/{tabPictures.length}
          </p>
       </div>
    );

@@ -6,10 +6,8 @@ import Collapse from '../components/Collapse';
 import FeaturesLocation from '../components/FeaturesLocation';
 
 const Location = () => {
-   // let { id } = useParams(); //récupère l'id de la location dans l'URL
    // Données locations
    const dataLocation = useLoaderData();
-   // const dataLocation = dataLocations.find((location) => location.id === id); //cherche parmis la DB les datas de l'Id
    //Liste d'équipements
    const equipmentsList = dataLocation.equipments.map((equipment, index) => (
       <li key={index}>{equipment}</li>

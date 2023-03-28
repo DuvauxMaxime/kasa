@@ -15,13 +15,11 @@ const Carrousel = ({ data }) => {
    let viewablePicture = data[index]; // Photo visible
    // Fonction image précédente
    const handlePrev = () => {
-      (index > 0 && setIndex(index - 1)) ||
-         (index === 0 && setIndex(tabPictures.length - 1));
+      index === 0 ? setIndex(tabPictures.length - 1) : setIndex(index - 1);
    };
    // Fonction image suivante
    const handleNext = () => {
-      (index < tabPictures.length - 1 && setIndex(index + 1)) ||
-         (index === tabPictures.length - 1 && setIndex(0));
+      index === tabPictures.length - 1 ? setIndex(0) : setIndex(index + 1);
    };
    // Fonction définir une image depuis un bullet point
    const moveBullet = (index) => {

@@ -23,8 +23,14 @@
     height: 52px;
     font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin:0;
+}
+
+@media screen and (min-width: 376px) and (max-width: 1026px) {
+    .title{
+       font-size: 0.9rem;
+    }    
 }
 
 @media screen and (max-width: 376px) {
@@ -33,6 +39,6 @@
     }
     .title{
         padding : 2px 5px 5px 10px ;
-        
+        font-size: 1.125rem;
     }
-  }
+}

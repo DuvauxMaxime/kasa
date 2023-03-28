@@ -21,6 +21,22 @@
     text-decoration: underline;
 }
 
+@media screen and (min-width: 376px) and (max-width: 1026px) {
+    .navBar{
+        padding: 28px 5.33% 0 0;
+    }
+    .navBar ul{
+       padding-left: 0;
+    }
+    .navLink{
+        font-size: 1rem;
+        text-transform: uppercase;
+        width:100px;
+        text-align: center;
+    }
+  }
+
+
 @media screen and (max-width: 376px) {
     .navBar{
         padding: 28px 5.33% 0 0;

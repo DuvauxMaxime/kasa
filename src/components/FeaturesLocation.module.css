@@ -55,6 +55,37 @@
 }
 
 
+@media screen and (min-width: 376px) and (max-width: 1026px) {
+    .container{
+        margin-top:15px;
+        flex-direction: column;
+    }
+    .title{
+        font-size: 1.125rem;
+    }
+
+    .text{
+        margin-top: 5px;
+        font-size: 0.875rem;
+    }
+    .leftSide{
+        width: 90%;
+    }
+    .rightSide{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 16px;
+    }    
+    .ownerPart{
+        font-size: 0.75rem;
+    }
+    .owner{
+        width: 50px;
+    }
+}
+
 @media screen and (max-width: 376px) {
     .container{
         margin-top:15px;

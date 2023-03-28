@@ -70,6 +70,17 @@
     width: 60px;
 }
 
+@media screen and (min-width: 376px) and (max-width: 1026px) {
+    .preview{
+        top: 270px;
+        left: 7.5%;
+    }
+    .next{
+        top: 270px;
+        right: 7.5%;
+    }
+  }
+
 @media screen and (max-width: 376px) {
     .container{
         width: 90%;

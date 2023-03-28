@@ -26,14 +26,18 @@ const Carrousel = ({ data }) => {
       setIndex(index);
    };
    // Fonction de création des bullets en fonction du nombre de photos dans le carroussel
-   const bulletPoints = tabPictures.map((picture, index) => (
-      <img
+   const bulletPoints = tabPictures.map((picture, indexPicture) => (
+      <li
          key={picture}
          src={bulletPoint}
-         className={styles.bulletPoint}
+         className={
+            index === indexPicture
+               ? styles.bulletPointActive
+               : styles.bulletPoint
+         }
          alt="bullet point"
          onClick={() => {
-            moveBullet(index);
+            moveBullet(indexPicture);
          }}
       />
    ));
@@ -63,7 +67,7 @@ const Carrousel = ({ data }) => {
             alt="flèche directionnelle droite"
             onClick={handleNext}
          />
-         <div className={styles.bulletPart}>{bulletPoints}</div>
+         <ul className={styles.bulletPart}>{bulletPoints}</ul>
          <p className={styles.indicator}>
             {/* Correction de l'index de la photo (+1) */}
             {index + 1}/{tabPictures.length}

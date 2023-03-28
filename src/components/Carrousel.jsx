@@ -37,6 +37,7 @@ const Carrousel = ({ data }) => {
          }}
       />
    ));
+
    return (
       <div
          className={`${styles.container} ${

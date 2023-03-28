@@ -4,7 +4,7 @@ import styles from './Collapse.module.css';
 
 const Collapse = ({ title, content }) => {
    const [active, setActive] = useState(false);
-   const handleToggle = (e) => {
+   const handleToggle = () => {
       setActive(!active);
    };
    return (

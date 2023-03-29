@@ -98,6 +98,26 @@
         top: 270px;
         right: 7.5%;
     }
+    .bulletPart{
+        top: 410px;
+    }
+    .bulletPoint{
+        width: 15px;
+        height: 15px;
+        margin: 8px;
+        border: solid 3.5px white;
+    }
+
+    .bulletPointActive{
+        width: 15px;
+        height: 15px;
+        margin: 8px;
+        border: solid 3.5px black;
+    }
+    .indicator{
+        top: 450px;
+    }
+    
   }
 
 @media screen and (max-width: 376px) {
@@ -120,9 +140,19 @@
         visibility: hidden
     }
     .bulletPart{
-        top: 300px;
+        top: 280px;
     }
     .bulletPoint{
-        width: 15px;
+        width: 12px;
+        height: 12px;
+        border: solid 3px white;
+        margin: 5px;
+    }
+    .bulletPointActive{
+        width: 12px;
+        height: 12px;
+        margin: 5px;
+        border: solid 3px black;
+
     }
 }

@@ -76,7 +76,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-top: 16px;
+        margin-top: 5px;
     }    
     .ownerPart{
         font-size: 0.75rem;
@@ -97,7 +97,7 @@
 
     .text{
         margin-top: 5px;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
     }
     .leftSide{
         width: 90%;

@@ -46,5 +46,6 @@
     .title{
         padding : 2px 5px 5px 10px ;
         font-size: 1.125rem;
+        width: 75%;
     }
 }

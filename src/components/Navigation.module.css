@@ -36,8 +36,7 @@
     }
   }
 
-
-@media screen and (max-width: 376px) {
+@media screen and (min-width: 296px) and (max-width: 376px) {
     .navBar{
         padding: 28px 5.33% 0 0;
     }
@@ -47,7 +46,24 @@
     .navLink{
         font-size: 0.75rem;
         text-transform: uppercase;
-        width:80px;
+        width:75px;
         text-align: center;
     }
   }
+
+  @media screen and (max-width: 296px) {
+    .navBar{
+        padding: 5px 0 0 0;
+        height: 30px;
+    }
+    .navBar ul{
+       padding-left: 0;
+    }
+    .navLink{
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        width:100px;
+        text-align: center;
+    }
+ }
+

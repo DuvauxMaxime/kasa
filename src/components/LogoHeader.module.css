@@ -1,28 +1,41 @@
-.kasaLogo{
+.kasaLogoLink{
     padding: 40px 0 0 6.94%;
     width: 14.58%;
     max-height: 68px;
 }
 
+
 @media screen and (min-width: 376px) and (max-width: 1026px) {
-    .kasaLogo{
-        padding: 20px 0 0 5.33%;
+    .kasaLogoLink{
+        display: flex;
+        padding: 28px 0 0 5.33%;
         width: 22%;
+    }
+    .kasaLogo{
+        width: 100%;
     }
 
  }
 
 @media screen and (min-width: 296px) and (max-width: 376px) {
-    .kasaLogo{
-        padding: 20px 0 0 5.33%;
+    .kasaLogoLink{
+        display: flex;
+        padding: 28px 0 0 5.33%;
         width: 38.67%;
+    }
+    .kasaLogo{
+        width: 100%;
     }
     
   }
 
 @media screen and (max-width: 296px) {
+    .kasaLogoLink{
+        display: flex;
+        padding: 28px 0 0 5.33%;
+        width: 42%;
+    }
     .kasaLogo{
-        padding: 20px 0 0 0;
-        width: 38.67%;
+        width: 100%;
     }
 }

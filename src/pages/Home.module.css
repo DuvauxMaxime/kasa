@@ -22,6 +22,8 @@
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 20px;
         grid-column-gap: 4.5%;
+        padding: 56px 35px;
+
     }
   }
 
@@ -30,6 +32,8 @@
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 20px;
         grid-column-gap: 4.5%;
+        padding: 56px 25px;
+
     }
   }
 

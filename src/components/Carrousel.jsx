@@ -1,6 +1,5 @@
 import preview from '../assets/preview.svg';
 import next from '../assets/next.svg';
-import bulletPoint from '../assets/bulletPoint.png';
 import { useState } from 'react';
 import styles from './Carrousel.module.css';
 
@@ -29,7 +28,6 @@ const Carrousel = ({ data }) => {
    const bulletPoints = tabPictures.map((picture, indexPicture) => (
       <li
          key={picture}
-         src={bulletPoint}
          className={
             index === indexPicture
                ? styles.bulletPointActive

@@ -14,6 +14,7 @@
     top: 300px;
     left: 8.5%;
     width: 3.5%;
+    transition: all 300ms;
 }
 
 .next{
@@ -21,6 +22,8 @@
     top: 300px;
     right: 8.5%;
     width: 3.5%;
+    transition: all 300ms;
+
 }
 
 
@@ -51,6 +54,7 @@
     border: solid 5px white;
     border-radius: 50%;
     list-style: none;
+    transition: all 300ms;
 }
 
 .bulletPoint:hover{
@@ -62,10 +66,10 @@
     height: 20px;
     margin: 10px;
     padding: 0;
-    background-color: black;
-    border: solid 5px #FF6060;
+    background-color: #FF6060;
+    border: solid 5px black;
     border-radius: 50%;
-  
+    transform: scale(1.2);
     list-style: none;
 }
 
@@ -94,6 +98,26 @@
         top: 270px;
         right: 7.5%;
     }
+    .bulletPart{
+        top: 410px;
+    }
+    .bulletPoint{
+        width: 15px;
+        height: 15px;
+        margin: 8px;
+        border: solid 3.5px white;
+    }
+
+    .bulletPointActive{
+        width: 15px;
+        height: 15px;
+        margin: 8px;
+        border: solid 3.5px black;
+    }
+    .indicator{
+        top: 450px;
+    }
+    
   }
 
 @media screen and (max-width: 376px) {
@@ -116,9 +140,19 @@
         visibility: hidden
     }
     .bulletPart{
-        top: 300px;
+        top: 280px;
     }
     .bulletPoint{
-        width: 15px;
+        width: 12px;
+        height: 12px;
+        border: solid 3px white;
+        margin: 5px;
+    }
+    .bulletPointActive{
+        width: 12px;
+        height: 12px;
+        margin: 5px;
+        border: solid 3px black;
+
     }
 }

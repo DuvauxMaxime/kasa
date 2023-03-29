@@ -10,25 +10,32 @@
     bottom: -15px;
 }
 .kasaLogoLink{
+    margin: 66px 0 28px 0;
     width: 8.47%;
 }
 .kasaLogo {
-    margin: 66px 0 28px 0;
     width: 100%;
 }
 .text{
     margin: 0 0 29px 0;
+    font-size: 1.5rem;
 }
 
 @media screen and (min-width: 376px) and (max-width: 1026px) {
-    .kasaLogo{
-        padding: 20px 0 0 5.33%;
-        width: 100%;
+    .footer {
+        position: relative;
+        bottom: -25px;
     }
     .kasaLogoLink{
         width: 20%;
+        margin: 66px 0 30px 0 ;
     }
-
+    .kasaLogo{
+        width: 100%;
+    }
+    .text{
+        font-size: 1.2rem;
+    }
  }
 
 @media screen and (max-width: 376px) {
@@ -36,12 +43,12 @@
         position: relative;
         bottom: -25px;
     }
-    .kasaLogo {
-        margin: 66px 0 30px 0;
-        width: 100%;
-    }
     .kasaLogoLink{
+        margin: 66px 0 30px 0;
         width: 32.53%;
+    }
+    .kasaLogo {
+        width: 100%;
     }
     .text{
         font-size: 0.75rem;
